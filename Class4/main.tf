@@ -20,7 +20,6 @@ resource "aws_instance" "web" {
   availability_zone = "us-east-2a"
   key_name = aws_key_pair.deployer.key_name
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
-
 }
 
 resource "null_resource" "cluster" {
@@ -36,7 +35,7 @@ resource "null_resource" "cluster" {
   }
 
   provisioner "remote-exec" {
-    inline = [
+    inline = [  # inline = command
       "sudo apt update -y",
       "sudo apt install apache2 -y"
       

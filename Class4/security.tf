@@ -2,7 +2,7 @@ resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
 
- ingress {
+    ingress {
     description      = "TLS from VPC"
     from_port        = 80
     to_port          = 80
@@ -10,7 +10,7 @@ resource "aws_security_group" "allow_tls" {
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
-   ingress {
+    ingress {
     description      = "TLS from VPC"
     from_port        = 22
     to_port          = 22
@@ -24,5 +24,8 @@ resource "aws_security_group" "allow_tls" {
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
   }
-
 }
+
+
+
+
