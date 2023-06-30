@@ -14,6 +14,6 @@ variable key_name {
 variable key_file {
     type = string
     description = "Provide key file location"
-    default = "~/.ssh/id_rsa.pub"
+    default = ""
 }
 
