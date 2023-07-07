@@ -1,4 +1,4 @@
-module "ec2" {
+module "project" {
   source  = "Beishenov7/project/module"
   version = "0.0.2"
   region = "us-east-2"
